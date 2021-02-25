@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "N1ght-W0lf"
-title_separator          : "-"
+title                    : "DetectiveStrings"
+title_separator          : ""
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Abdallah Elshinbary"
-description              : "Malware Analysis - Reverse Engineering - Exploit Development"
+name                     : "Mohamed Labib"
+description              : "Momory Forensics - Malware Analysis - Reverse Engineering "
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -39,7 +39,7 @@ comments:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
     num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+    colorscheme          : # "light" (default), "dark" 
   utterances:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
@@ -63,14 +63,14 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification : "J3MnMF94zaZhTUoNtUiRt9cKsr7hiMyTxEdAvQ3GfmY"
+#google_site_verification : "J3MnMF94zaZhTUoNtUiRt9cKsr7hiMyTxEdAvQ3GfmY"
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : 
 facebook:
   username               :
   app_id                 :
@@ -93,30 +93,30 @@ analytics:
 
 # Site Author
 author:
-  name             : "Abdallah Elshinbary"
+  name             : "Mohamed Labib"
   avatar           : /assets/images/site_data/avatar.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Malware Analysis & Reverse Engineering Adventures"
-  location         : "Area 51"
+  bio              : "Forensics , take it or lose it "
+  location         : ""
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:abdallahelshinbary82@gmail.com"
+      url: "hamada.mohamed1112@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/NightW0o0lf"
+      url: "https://twitter.com/LabibNag"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/abdallah-elshinbary/"
+      url: "https://www.linkedin.com/in/mohamed-labib-3bb381178/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/N1ght-W0lf"
+      url: "https://github.com/m0hamed1112"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -250,9 +250,9 @@ tag_archive:
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
+   enabled:
+     - categories
+     - tags
 #   layouts:
 #     category: archive-taxonomy
 #     tag: archive-taxonomy
