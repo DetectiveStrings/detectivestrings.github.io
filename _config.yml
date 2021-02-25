@@ -96,7 +96,7 @@ author:
   name             : "Mohamed Labib"
   avatar           : /assets/images/site_data/avatar.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Forensics , take it or lose it "
-  location         : ""
+  #location         : ""
   email            :
   links:
     - label: "Email"
