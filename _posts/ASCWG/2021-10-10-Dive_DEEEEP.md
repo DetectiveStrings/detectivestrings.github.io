@@ -22,7 +22,7 @@ Description : the plain is very easy and state forward, jump to the kernel, conv
 Files : Challenge cinatins 2 vresions for windows 7 and 10 , each version conatins 2 files , .sys & .exe .
 
 # Note
-BSOD is kind of hint on the challenge , to find the kernel function which change in the shared memory with usermod , during the comption i asked the palyers to do the step which will case BSOD (%50 to see there reaction , %50 to give them the hint).
+BSOD is kind of hint on the challenge, to find the kernel function which changes in the shared memory with usermod, during the competition I asked the players to do the step which will cause BSOD (%50 to see their reaction, %50 to give them the hint)
 
 i will not follow this path on this writeup , ill do the basec steps to follow driver entery 
 
