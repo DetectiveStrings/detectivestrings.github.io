@@ -51,11 +51,20 @@ sc create <driver_name> type= kernel binpath= <path_to_.sys_file>
 now we have the driver created . 
 
 # Usermod 
-usermod app is not very important in this challenge you can skip it . 
+Usermod app is not very important in this challenge you can skip it. 
 
-we will start by checking the application behavur befor and after strting the driver .
+We will start by checking the application behaviour before and after starting the driver.
 
-quickly run the app without starting the driver . 
+Quickly run the app without starting the driver. 
 
 [![2](/assets/images/ASCWG/k2.png)](/assets/images/ASCWG/k2.png)
+
+the app just show a message and nothing else , it seams to be wating some input from the kernel. 
+
+so lets try again after starting the driver . 
+
+```bash 
+sc start <driver_name>
+```
+[![3](/assets/images/ASCWG/k3.png)](/assets/images/ASCWG/k3.png)
 
