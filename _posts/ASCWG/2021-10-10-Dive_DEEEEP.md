@@ -102,3 +102,17 @@ the function start by seting some varuables , and creat shared file handle calle
 after loading the handle , it the app checks the shared memory , then load the received data which is being sent using the kernel control function (so in kernel er need to find the control function )
 
 [![8](/assets/images/ASCWG/k8.png)](/assets/images/ASCWG/k8.png)
+
+the variable inbuffer is the process id, you can know by following the std::cout parameter, you will see v2 is the process id in usermod, and v2 gets its value from inbuffer which is the received data from the kernel. 
+
+[![9](/assets/images/ASCWG/k10.png)](/assets/images/ASCWG/k10.png)
+
+before printing the PID, the app checks if the new PID is 0 or equal to the previous PID, by saving v2 in v1 after the if block. 
+
+[![10](/assets/images/ASCWG/k11.png)](/assets/images/ASCWG/k11.png)
+
+[![11](/assets/images/ASCWG/k9.png)](/assets/images/ASCWG/k9.png)
+
+Then we move to another if block that checks 2 bytes received from kernel, the condition returns true that means the flag will be decrypted and mixed using received bytes from the kernel and then it will be printed after decryption.
+
+[![12](/assets/images/ASCWG/k12.png)](/assets/images/ASCWG/k12.png)
