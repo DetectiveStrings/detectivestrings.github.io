@@ -215,4 +215,37 @@ So it searches for the word ida or ghidra in the process image name.
 
 [![24](/assets/images/ASCWG/k23.png)](/assets/images/ASCWG/k23.png)
 
-if its found it will set a byte in shared struct to 1 , and call a function 
+if it is found it will set a byte in the shared struct to 1, and call a function that contains some strings to inform you that it will cause a BSOD. 
+
+if not and the first condition is true, it will start to search for the string **RtlCompareUnicodeString** on the image name. 
+
+[![25](/assets/images/ASCWG/k24.png)](/assets/images/ASCWG/k24.png)
+
+if it's found, it will set another byte to 1 and the flag should be printed in the usermod app. 
+
+# IDEA 
+
+the flag will be printed only if the ppid is 0x10001 and process image name contains **RtlCompareUnicodeString** . 
+
+# Exploit 
+
+we need to set a process id to 0x10001 using windbg, and make it start the process with the name **RtlCompareUnicodeString** or contain this string in its path.
+
+start the driver 
+
+```bash 
+sc start <driver_name>
+```
+
+start usermod app, start windbug as admin and start a cmd process. 
+
+get the and eprocess object. 
+
+in windbg type 
+
+```bash 
+!process 0 0 
+```
+then search for the last opened cmd process .
+
+[![26](/assets/images/ASCWG/k26.png)](/assets/images/ASCWG/k26.png)
