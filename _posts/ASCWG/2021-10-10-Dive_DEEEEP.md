@@ -249,3 +249,33 @@ in windbg type
 then search for the last opened cmd process .
 
 [![26](/assets/images/ASCWG/k26.png)](/assets/images/ASCWG/k26.png)
+
+use 
+
+```bash 
+dd <Eprocess_address> 
+```
+
+and start searching for the PID location in this eprocess structure.
+
+or you can search enter net for eprocess struct and search using your version to get the coreect structure .<sub><sup>[3]</sup></sub>
+
+in my case the version is bettwen 10.0 and 1607 so the pid location is <eprocess_address> +0x2e8 
+
+to change the pid use 
+
+```bash 
+eq <Eprocess_address>+<pid_location> 10001
+```
+[![27](/assets/images/ASCWG/k27.png)](/assets/images/ASCWG/k27.png)
+
+now rename any process to RtlCompareUnicodeString or create a folder called RtlCompareUnicodeString and add any exe to it. 
+
+then start this exe using the edited process. 
+
+[![28](/assets/images/ASCWG/k28.png)](/assets/images/ASCWG/k28.png)
+
+bengooo we got the  flag . 
+
+# resources 
+TBD 
