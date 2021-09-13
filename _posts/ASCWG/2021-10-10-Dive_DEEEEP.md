@@ -11,11 +11,24 @@ categories:
   - DFIR 
 toc: true
 ---
-# About Challenge
+# About Challenge.
 
-Name  : Dive DEEEEP
+Name  : Dive DEEEEP.
 
-Level : Hard 
+Level : Hard.
 
 Description : the plain is very easy and state forward, jump to the kernel, convince it to send the flag to the user, that's it . 
+
+Files : Challenge cinatins 2 vresions for windows 7 and 10 , each version conatins 2 files , .sys & .exe .
+
+# Setup Challenge 
+once we are working with kernel driver, we have to set the testing machine invromint.
+
+start the cmd as admin and enable testing mod by running 
+
+```bash 
+bcdedit /set testsigning on
+```
+
+then restart the machine 
 
