@@ -116,3 +116,14 @@ before printing the PID, the app checks if the new PID is 0 or equal to the prev
 Then we move to another if block that checks 2 bytes received from kernel, the condition returns true that means the flag will be decrypted and mixed using received bytes from the kernel and then it will be printed after decryption.
 
 [![12](/assets/images/ASCWG/k12.png)](/assets/images/ASCWG/k12.png)
+
+the last thing we can get from this exe is the condetion that checks some recived handles bytes , debending on this bytes it will terminate the recived process pid.
+[![13](/assets/images/ASCWG/k13.png)](/assets/images/ASCWG/k13.png)
+
+now we don't need anything else from the usermod, let's move to the kernel driver. 
+
+
+
+# Kernel 
+
+just load the driver to IDA without starting it, we almost can do the analysis statically.
