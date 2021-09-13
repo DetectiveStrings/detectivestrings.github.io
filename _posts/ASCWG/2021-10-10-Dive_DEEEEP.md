@@ -153,4 +153,12 @@ so we need where is this struct is being changed or set.
 
 back to the driver entry function , we can find that the api **PsSetCreateProcessNotifyRoutine** is very intersting .
 
-according to Microsoft documentation : The PsSetCreateProcessNotifyRoutine routine adds a driver-supplied callback routine to, or removes it from, a list of routines to be called whenever a process is created or deleted. <sub><sup>[1]</sup></sub>
+according to Microsoft documentation : The PsSetCreateProcessNotifyRoutine routine adds a driver-supplied callback routine to, or removes it from, a list of routines to be called whenever a process is created or deleted. 
+
+```c++
+NTSTATUS PsSetCreateProcessNotifyRoutine(
+  PCREATE_PROCESS_NOTIFY_ROUTINE NotifyRoutine,
+  BOOLEAN                        Remove
+);
+```
+<sub><sup>[1]</sup></sub>
