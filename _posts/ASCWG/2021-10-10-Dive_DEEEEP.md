@@ -278,4 +278,5 @@ then start this exe using the edited process.
 bengooo we got the  flag . 
 
 # resources 
-TBD 
+
+[1]: https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/ntddk/nf-ntddk-pssetcreateprocessnotifyroutine
