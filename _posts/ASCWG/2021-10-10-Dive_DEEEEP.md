@@ -119,11 +119,28 @@ Then we move to another if block that checks 2 bytes received from kernel, the c
 
 the last thing we can get from this exe is the condetion that checks some recived handles bytes , debending on this bytes it will terminate the recived process pid.
 [![13](/assets/images/ASCWG/k13.png)](/assets/images/ASCWG/k13.png)
+but from the output message, we can expect a blue screen of death if this condition is true, so we need to be careful will working with the driver. 
 
 now we don't need anything else from the usermod, let's move to the kernel driver. 
-
-
 
 # Kernel 
 
 just load the driver to IDA without starting it, we almost can do the analysis statically.
+
+like the usermod , ida will not land you to the read driver entry location , just follow the function return . 
+
+you will land in the driver entry loader function.
+[![14](/assets/images/ASCWG/k14.png)](/assets/images/ASCWG/k14.png)
+
+jump to driver entry .
+[![15](/assets/images/ASCWG/k15.png)](/assets/images/ASCWG/k15.png)
+
+The driver starts by creating a registry device and shared memory. 
+
+also it set 3 driver objects to point to 3 functions , create call , clos call and control.
+
+we can jump to the control function to findout what happens (by the way PsSetCreateProcessNotifyRoutine is very interesting we will back to it ). 
+
+[![16](/assets/images/ASCWG/k16.png)](/assets/images/ASCWG/k16.png)
+
+the control function takes IRP object as permitted, then changes its structure objects values before completing the request and send it.
