@@ -153,7 +153,9 @@ so we need where is this struct is being changed or set.
 
 back to the driver entry function , we can find that the api **PsSetCreateProcessNotifyRoutine** is very intersting .
 
-according to Microsoft documentation : The PsSetCreateProcessNotifyRoutine routine adds a driver-supplied callback routine to, or removes it from, a list of routines to be called whenever a process is created or deleted. 
+[![17](/assets/images/ASCWG/k17.png)](/assets/images/ASCWG/k17.png)
+
+according to Microsoft documentation : The PsSetCreateProcessNotifyRoutine routine adds a driver-supplied callback routine to, or removes it from, a list of routines to be called whenever a process is created or deleted. <sub><sup>[1]</sup></sub>
 
 ```c++
 NTSTATUS PsSetCreateProcessNotifyRoutine(
@@ -161,4 +163,34 @@ NTSTATUS PsSetCreateProcessNotifyRoutine(
   BOOLEAN                        Remove
 );
 ```
-<sub><sup>[1]</sup></sub>
+
+also according to Microsoft documentation about **PCREATE_PROCESS_NOTIFY_ROUTINE** : Process-creation callback implemented by a driver to track the system-wide creation and deletion of processes against the driver's internal state.<sub><sup>[2]</sup></sub>
+
+```c++
+PCREATE_PROCESS_NOTIFY_ROUTINE PcreateProcessNotifyRoutine;
+
+void PcreateProcessNotifyRoutine(
+  HANDLE ParentId,
+  HANDLE ProcessId,
+  BOOLEAN Create
+)
+{...}
+);
+```
+
+now we know that PsSetCreateProcessNotifyRoutine will throw ppid , pid and creatFlag to PCREATE_PROCESS_NOTIFY_ROUTINE function .
+
+so this is the API we were searching for, according to the usermod output it shows process id. 
+
+jump to the PCREATE_PROCESS_NOTIFY_ROUTINE function . 
+
+[![18](/assets/images/ASCWG/k18.png)](/assets/images/ASCWG/k18.png)
+
+the function start by checking if the process is created or terminated by checking the creat flag. 
+
+[![19](/assets/images/ASCWG/k19.png)](/assets/images/ASCWG/k19.png)
+
+then it gets the eprocess object location using the PID.
+
+[![20](/assets/images/ASCWG/k20.png)](/assets/images/ASCWG/k20.png)
+
