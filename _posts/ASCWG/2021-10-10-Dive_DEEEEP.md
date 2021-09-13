@@ -279,4 +279,6 @@ bengooo we got the  flag .
 
 # resources 
 
+[link text itself]: http://www.reddit.com
+
 [1]: https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/ntddk/nf-ntddk-pssetcreateprocessnotifyroutine
