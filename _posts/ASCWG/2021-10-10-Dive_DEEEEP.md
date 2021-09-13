@@ -37,4 +37,4 @@ start cmd as admin again and create the driver
 ```bash 
 sc create <driver_name> type= kernel binpath= <path_to_.sys_file>
 ```
-[![1](/assets/images/WannaCry/p1/i3.png)](/assets/images/ASCWG/k1.png)
+[![1](/assets/images/ASCWG/k1.png)](/assets/images/ASCWG/k1.png)
