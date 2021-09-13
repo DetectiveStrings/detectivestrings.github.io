@@ -22,7 +22,7 @@ Description : the plain is very easy and state forward, jump to the kernel, conv
 Files : Challenge cinatins 2 vresions for windows 7 and 10 , each version conatins 2 files , .sys & .exe .
 
 # Note
-BSOD is kind of hint on the challenge, to find the kernel function which changes in the shared memory with usermod, during the competition I asked the players to do the step which will cause BSOD (%50 to see their reaction, %50 to give them the hint)
+BSOD is kind of hint on the challenge, to find the kernel function which changes in the shared memory with usermod, during the competition I asked the players to do the step which will cause BSOD (%50 to see my friends reaction, %50 to give them the hint)
 
 i will not follow this path on this writeup , ill do the basec steps to follow driver entery 
 
@@ -190,7 +190,29 @@ the function start by checking if the process is created or terminated by checki
 
 [![19](/assets/images/ASCWG/k19.png)](/assets/images/ASCWG/k19.png)
 
-then it gets the eprocess object location using the PID.
+then it gets the eprocess object location using the PID and use this eprocess object to get the image name .
 
 [![20](/assets/images/ASCWG/k20.png)](/assets/images/ASCWG/k20.png)
 
+the next step do a check on parent id , if the ppid is 65537 then it will set byte from the shared struct to 1 ,
+then it gets its eprocess object location .
+
+[![21](/assets/images/ASCWG/k21.png)](/assets/images/ASCWG/k21.png)
+
+then it starts to decrypt some data and write it in a struct to be shared .
+
+befor doing any thing image name it cast the result from RtlunicodeString to char array and save it in dest . 
+
+[![22](/assets/images/ASCWG/k22.png)](/assets/images/ASCWG/k22.png)
+
+then it call function and thraw dest and ather string .
+
+this function is just **strstr** 
+
+[![23](/assets/images/ASCWG/k25.png)](/assets/images/ASCWG/k25.png)
+
+So it searches for the word ida or ghidra in the process image name.
+
+[![24](/assets/images/ASCWG/k23.png)](/assets/images/ASCWG/k23.png)
+
+if its found it will set a byte in shared struct to 1 , and call a function 
