@@ -17,7 +17,11 @@ Name  : Dive DEEEEP.
 
 Level : Hard.
 
+PTS : 900
+
 Description : the plain is very easy and state forward, jump to the kernel, convince it to send the flag to the user, that's it . 
+
+Link : [challenge link](https://github.com/DetectiveStrings/ASCWGsrc/tree/main/Dive%20DEEEEP) 
 
 Files : Challenge cinatins 2 vresions for windows 7 and 10 , each version conatins 2 files , .sys & .exe .
 
