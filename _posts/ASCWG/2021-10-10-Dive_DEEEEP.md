@@ -89,4 +89,13 @@ lets load the app to ida to check if it can do any auther functions .
 
 to get main function follow start function return . 
 
+[![5](/assets/images/ASCWG/k5.png)](/assets/images/ASCWG/k5.png)
+
+you can fund function takes environment argv, argc as parameters, this function should be the main function. 
+
+[![6](/assets/images/ASCWG/k6.png)](/assets/images/ASCWG/k6.png)
+
+the function start by seting some varuables , and creat shared file handles . 
+
+[![7](/assets/images/ASCWG/k7.png)](/assets/images/ASCWG/k7.png)
 
