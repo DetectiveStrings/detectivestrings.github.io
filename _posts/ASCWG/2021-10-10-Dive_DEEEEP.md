@@ -283,8 +283,8 @@ bengooo we got the  flag .
 
 # resources 
 
-[1 PsSetCreateProcessNotifyRoutine ](https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/ntddk/nf-ntddk-pssetcreateprocessnotifyroutine)
+[1- PsSetCreateProcessNotifyRoutine ](https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/ntddk/nf-ntddk-pssetcreateprocessnotifyroutine)
 
-[2 PCREATE_PROCESS_NOTIFY_ROUTINE ](https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/ntddk/nc-ntddk-pcreate_process_notify_routine)
+[2- PCREATE_PROCESS_NOTIFY_ROUTINE ](https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/ntddk/nc-ntddk-pcreate_process_notify_routine)
 
-[3 EPROCESS ](https://www.geoffchappell.com/studies/windows/km/ntoskrnl/inc/ntos/ps/eprocess/index.htm)
+[3- EPROCESS ](https://www.geoffchappell.com/studies/windows/km/ntoskrnl/inc/ntos/ps/eprocess/index.htm)
