@@ -95,7 +95,10 @@ you can fund function takes environment argv, argc as parameters, this function 
 
 [![6](/assets/images/ASCWG/k6.png)](/assets/images/ASCWG/k6.png)
 
-the function start by seting some varuables , and creat shared file handles . 
+the function start by seting some varuables , and creat shared file handle called **HelloLabib** (Just forgot to rename the registry ) . 
 
 [![7](/assets/images/ASCWG/k7.png)](/assets/images/ASCWG/k7.png)
 
+after loading the handle , it the app checks the shared memory , then load the received data which is being sent using the kernel control function (so in kernel er need to find the control function )
+
+[![8](/assets/images/ASCWG/k8.png)](/assets/images/ASCWG/k8.png)
