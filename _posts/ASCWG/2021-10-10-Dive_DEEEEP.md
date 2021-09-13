@@ -143,8 +143,14 @@ The driver starts by creating a registry device and shared memory.
 
 also it set 3 driver objects to point to 3 functions , create call , clos call and control.
 
-we can jump to the control function to findout what happens (by the way PsSetCreateProcessNotifyRoutine is very interesting we will back to it ). 
+we can jump to the control function to findout what happens . 
 
 [![16](/assets/images/ASCWG/k16.png)](/assets/images/ASCWG/k16.png)
 
 the control function takes IRP object as permitted, then changes its structure objects values before completing the request and send it.
+
+so we need where is this struct is being changed or set.
+
+back to the driver entry function , we can find that the api **PsSetCreateProcessNotifyRoutine** is very intersting .
+
+according to Microsoft documentation : The PsSetCreateProcessNotifyRoutine routine adds a driver-supplied callback routine to, or removes it from, a list of routines to be called whenever a process is created or deleted. <sub><sup>[1]</sup></sub>
