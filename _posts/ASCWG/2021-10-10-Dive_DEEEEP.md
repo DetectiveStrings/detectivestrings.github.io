@@ -55,6 +55,8 @@ Usermod app is not very important in this challenge you can skip it.
 
 We will start by checking the application behaviour before and after starting the driver.
 
+## general look 
+
 Quickly run the app without starting the driver. 
 
 [![2](/assets/images/ASCWG/k2.png)](/assets/images/ASCWG/k2.png)
@@ -62,9 +64,29 @@ Quickly run the app without starting the driver.
 the app just show a message and nothing else , it seams to be wating some input from the kernel. 
 
 so lets try again after starting the driver . 
-
+ 
 ```bash 
 sc start <driver_name>
 ```
 [![3](/assets/images/ASCWG/k3.png)](/assets/images/ASCWG/k3.png)
+
+run the app 
+
+[![4](/assets/images/ASCWG/k4.png)](/assets/images/ASCWG/k4.png)
+
+The app outputs the process id of any newly spawned process.
+
+you  can check this by strting new processes and compair its id to the program output .
+
+close the driver .
+ 
+```bash 
+sc stop <driver_name>
+```
+
+## close look
+lets load the app to ida to check if it can do any auther functions . 
+
+to get main function follow start function return . 
+
 
