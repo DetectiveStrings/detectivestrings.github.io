@@ -1,0 +1,13 @@
+--- 
+title: "DeepDive" 
+classes: wide 
+header:   
+  teaser: /assets/images/ASCWG/kernel.jpg 
+ribbon: green 
+description: "DeepDive challenge From CyberDefinders, Solved By CTFCREATORS." 
+categories: 
+  - WalkThrough 
+  - CyberDefinders 
+- DFIR 
+toc: true 
+--- 
