@@ -39,3 +39,23 @@ you can read more detailes from here [2](https://www.microsoft.com/en-us/securit
 
 So we will investigate this Svchost process memory to collect information that can help us detect the malicious task.
 
+# Lab Desription 
+
+In this blog post, I will not provide the used dump.
+
+Machine os : windows 10 
+
+Instead of dumping svchost process memory only , I did a full memory dump to simulate what would happen in a real case.
+
+Machine memory size : 10 GB 
+
+Imaging Tool : [FTkimager](https://accessdata.com/product-download/ftk-imager-version-4-5) 
+
+Memory Analysis Tool : [volatility 3](https://github.com/volatilityfoundation/volatility3) 
+
+Svchost Memory Analysis Tool : [My own svchost tasks extractor](https://github.com/DetectiveStrings/svcHostTasksParser) ```The full version will be available in days ```
+
+To simulate a case, you need to schedule a new task , then remove the task registry from (Tasks/{} , Tree/TaskName ) and remove the XML file from system32/Tasks/<TaskName>. 
+
+You can follow this [video](https://www.youtube.com/watch?v=xrd0w505aS8) 
+  
