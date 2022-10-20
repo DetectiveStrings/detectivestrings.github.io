@@ -11,3 +11,9 @@ categories:
   - DFIR 
 toc: true
 ---
+
+# Introduction .
+Windows scheduled tasks are essential for automating many important tasks, such as Windows updates, checking Windows services, backing up data, and so on.
+
+you can read more about scadule task creation from here [1](https://www.windowscentral.com/how-create-automated-task-using-task-scheduler-windows-10) 
+
