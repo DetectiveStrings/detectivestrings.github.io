@@ -171,3 +171,15 @@ The tool will parese some important data which was found in the task object sect
 [![5](/assets/images/scvh/5.png)](/assets/images/scvh/5.png)
   
 Before checking the file, we can check information from the other task instance.  
+  
+[![6](/assets/images/scvh/6.png)](/assets/images/scvh/6.png)
+
+We discovered something that can indicate the deleted key from/tree (I will add more functions to the tool to pares all the key information from this section), but you will not be able to find this information most of the time.   
+  
+We can now check the bat file on the desk and analyze it.
+  
+# Conclusion 
+
+SVCHOST is an impostant windows process , so it's one of the best choices for attackers and malware to use it on their attack chane . As a result, you can find useful information on it. 
+  
+Thanks For your Time 
