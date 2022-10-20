@@ -15,7 +15,7 @@ toc: true
 # Introduction .
 Windows scheduled tasks are essential for automating many important tasks, such as Windows updates, checking Windows services, backing up data, and so on.
 
-you can read more about scadule task creation from here [1](https://www.windowscentral.com/how-create-automated-task-using-task-scheduler-windows-10) 
+you can read more about scadule task creation from [here](https://www.windowscentral.com/how-create-automated-task-using-task-scheduler-windows-10) 
 
 after the task creation a new registey keys will be created on  
 ```
@@ -34,7 +34,7 @@ Nothing will happen, and SVCHOST will continue with the task execution, despite 
 
 In this case, SVCHOST depends on its own memory data to execute the task command.
 
-you can read more detailes from here [2](https://www.microsoft.com/en-us/security/blog/2022/04/12/tarrask-malware-uses-scheduled-tasks-for-defense-evasion/)
+you can read more detailes from [here](https://www.microsoft.com/en-us/security/blog/2022/04/12/tarrask-malware-uses-scheduled-tasks-for-defense-evasion/)
 
 So we will investigate this SVCHOST process memory to collect information that can help us detect the malicious task.
 
