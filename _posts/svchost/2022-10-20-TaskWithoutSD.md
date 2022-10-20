@@ -25,3 +25,4 @@ and
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks 
 ```
+, New XML configration file with the task name will be added to the directory ```windows/system32/Tasks```
