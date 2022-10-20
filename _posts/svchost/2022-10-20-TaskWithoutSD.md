@@ -25,4 +25,6 @@ and
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks 
 ```
-, New XML configration file with the task name will be added to the directory ```windows/system32/Tasks```
+A new XML configuration file with the task name will be added to the directory ```windows/system32/Tasks``` as well.
+
+when the task condetion is true , svchost instance will execute the command which is represented on task Action value from ``` HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\{task triger}```
